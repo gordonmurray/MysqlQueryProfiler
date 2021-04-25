@@ -442,7 +442,7 @@ final class Page implements Renderable
 		header("Cache-Control: no-cache, no-store, max-age=0, private, post-check=0, pre-check=0, must-revalidate");
 
 		// https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type
-		header("Content-Type: text/html; charset=ISO-8859-1");
+		header("Content-Type: text/html; charset=" . MQP_CHARSET);
 
 		// Proxies
 		header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
