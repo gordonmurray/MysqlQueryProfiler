@@ -73,7 +73,7 @@ final class StatusProfiler extends Profiler
 
 	public function __construct(Mysqli $database, int $warmUpRuns)
 	{
-		$this->database = $database;
+		parent::__construct($database);
 		$this->warmUpRuns = $warmUpRuns;
 	}
 
@@ -140,7 +140,7 @@ final class ExplainProfiler extends Profiler
 
 	public function __construct(Mysqli $database)
 	{
-		$this->database = $database;
+		parent::__construct($database);
 	}
 
 	public function profile(string $query): array
@@ -170,7 +170,7 @@ final class TraceProfiler extends Profiler
 
 	public function __construct(Mysqli $database)
 	{
-		$this->database = $database;
+		parent::__construct($database);
 	}
 
 	public function profile(string $query): array
