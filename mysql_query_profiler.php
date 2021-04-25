@@ -390,8 +390,7 @@ final class ExplainReport implements Renderable
 
 		$queryId = 1;
 
-		$html = '<div class="resultset">';
-		$html .= '<table id="explain" summary="">';
+		$html = '<table id="explain" summary="">';
 		$html .= '<tr><th>id<th>select_type<th>Table<th>Type<th>Possible keys<th>Key<th class="r">Key len<th>Ref<th class="r">Rows<th class="r">Filtered<th>Extra';
 		foreach ($this->explainResults as $queryExplained) {
 			$html .= '<tr><th colspan="11" class="separator">Query ' . $queryId;
@@ -412,7 +411,6 @@ final class ExplainReport implements Renderable
 			$queryId++;
 		}
 		$html .= '</table>';
-		$html .= '</div>';
 
 		return $html;
 	}
